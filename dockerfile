@@ -1,5 +1,5 @@
 # Setup Node
-FROM node:18-alpine as build
+FROM node:14 as build
 
 # Dependency and Build
 WORKDIR /app
@@ -11,6 +11,6 @@ COPY . .
 # Create JS Build
 # RUN npm run build
 
-EXPOSE 8080
+EXPOSE 3000
 
-CMD ["node", "index.js"]
+CMD ["node", "server.js"]
